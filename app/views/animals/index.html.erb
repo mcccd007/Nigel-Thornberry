@@ -3,9 +3,11 @@
   <div id="wrapper">
     <h1>
       <div id="first">
-        Animals Index
+Animals index
       </div>
-      <%= link_to 'New Animal', new_animal_path %>
+      <div class="button big-btn">
+        <%= link_to 'New Animal', new_animal_path %>
+      </div>
     </h1>
   </div>
 
@@ -20,18 +22,20 @@
     </thead>
   </table>
 
+        <br>
   <% @animals.each do |animal| %>
 
-  <div id="div1">
-    <%= link_to animal.name, "/animals/#{animal.id}" %> &mdash;
-  </div>
+  <div id="div3">
+    <%= link_to animal.name, "/animals/#{animal.id}", class: "button"  %>
+    </div>
+  &mdash;
   <div id="div2">
     <p class="animal_time"><%= time_ago_in_words(animal.created_at) %> Ago &mdash;</p>
   </div>
   <div id="div3">
-    <%= button_to "X", "/animals/#{animal.id}", method: 'delete', class: "button", data: { confirm: 'Are you sure?' }  %>
+    <%= button_to "Delete me.", "/animals/#{animal.id}", method: 'delete', class: "button", data: { confirm: 'Are you sure?' }  %>
   </div>
-  <hr>
+  <hr width ="75%">
   <% end %>
 
-</div>
+  </div>

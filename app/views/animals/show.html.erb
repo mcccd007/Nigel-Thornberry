@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-
 <div id="animal_content">
   <h1 class ="name">
-    <%= @animal.name %>
+    <%= @animal.name %>:
+    was submitted <%= time_ago_in_words(@animal.created_at) %> ago
+    <div align="right">
+      <button type="button"><%= link_to "Edit #{@animal.name}", edit_animal_path(@animal)%></button>
+      | <button type="button"><%= link_to 'Back to Home', root_path %></button>
+    </div>
   </h1>
-
+  
   <p class="date">
-    Submitted <%= time_ago_in_words(@animal.created_at) %> ago
-    | <%= link_to 'Edit', edit_animal_path(@animal)%>
-    <!-- | <%= link_to 'Delete', animal_path(@animal), method: :delete %> -->
-    | <%= link_to 'Back to Home', root_path %>
   </p>
+  <!-- I should have the sightings count work with pluralize -->
+  <div id="sighting" >
+    <h2><%= @animal.sightings.count %> sightings for this animal  </h2>
+    <%= render @animal.sightings %>
+
+    <h3>Add a new sighting:</h3>
+    <%= render "sightings/form" %>
+
+  </div>.
+
+</div>

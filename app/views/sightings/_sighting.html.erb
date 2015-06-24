@@ -1,13 +1,26 @@
+
 <div class="sighting clearfix">
 	<div class="sighting_content">
+		<div class="container">
+		Date of:
+		<p class="sighting_date"><strong><%= sighting.date %></strong></p></div>
+	<div class="container">
+		Latitude:
+		<p class="sighting_latitude"><strong><%= sighting.latitude %></strong></p></div>
+	<div class="container">
+		Longitude:
+		<p class="sighting_longitude"><strong><%= sighting.longitude %></strong></p></div>
+		<div class="container">
+			Created
+		<p class="sighting_time"><%= time_ago_in_words(sighting.created_at) %> ago</p>
+		</div>
 
-		<p class="sighting_date"><strong><%= sighting.date %></strong></p>
-		<p class="sighting_latitude"><strong><%= sighting.latitude %></strong></p>
-		<p class="sighting_longitude"><strong><%= sighting.longitude %></strong></p>
-
-		<p class="sighting_time"><%= time_ago_in_words(sighting.created_at) %> Ago</p>
 	</div>
+	<div class="container">
+	<p> <%= link_to "Delete", [sighting.animal, sighting], method: :delete, class: "button",
+					data: { confirm: 'Are you sure?' }  %></p> |
 
-	<p> <%= link_to "Delete", [sighting.post, sighting], method: :delete, class: "button",
-					data: { confirm: 'Are you sure?' }  %></p>
+	<p> <%= link_to "Edit", [sighting.animal, sighting],class: "button" %></p>
+
+</div>
 </div>

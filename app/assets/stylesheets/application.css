@@ -13,20 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
  #wrapper {
-     width: 1440px;
+     width: 100%;
      border: 1px solid black;
  }
  #first {
-     width: 300px;
+     width: 500px;
      float:left;
      /*border: 1px solid red;*/
  }
  #second {
-     border: 1px solid green;
+     border: 1px white;
  }
-
-
 
  #div1 {
      display: inline-block;
@@ -37,3 +36,45 @@
  #div3 {
      display: inline-block;
  }
+
+.button {
+background-color: #000000;
+color: #FFFFFF;
+/*float: right;*/
+padding: 10px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+button {
+background-color: #000000;
+color: #FFFFFF;
+/*float: right;*/
+padding: 10px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.big-btn {
+    width: 200px;
+    height: 100px;
+}
+
+.reg-btn {
+    width: 100px;
+    height: 20px;
+}
+
+
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    /*background-color: #b0e0e6;*/
+}
+
+.container > * {
+    display: inline-block;
+}

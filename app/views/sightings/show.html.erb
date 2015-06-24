@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of sighting:</strong>
+  <%= @sighting.date %>
+</p>
+<p>
+  <strong>Latitude at sighting:</strong>
+  <%= @sighting.latitude %>
+</p>
+<p>
+  <strong>Longitude at sighting:</strong>
+  <%= @sighting.longitude %>
+</p>
+<!-- this is fucked up right here -->
+<p>
+  <strong>Region of sighting:</strong>
+  <%= @sighting.region%>
+</p>
+
+<%= link_to 'Back', root_path %>
