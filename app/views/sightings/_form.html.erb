@@ -1,0 +1,12 @@
+<%= form_for([@animal, @animal.sightings.build]) do |f| %>
+	<%= f.label :date %><br>
+	<%= f.text_field :date %><br>
+	<br>
+	<%= f.label :latitude %><br>
+	<%= f.text_area :latitude %><br>
+	<br>
+  <%= f.label :longitude %><br>
+  <%= f.text_area :longitude %><br>
+  <br>
+	<%= f.submit %>
+<% end %>

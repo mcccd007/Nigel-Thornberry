@@ -1,0 +1,13 @@
+<div class="sighting clearfix">
+	<div class="sighting_content">
+
+		<p class="sighting_date"><strong><%= sighting.date %></strong></p>
+		<p class="sighting_latitude"><strong><%= sighting.latitude %></strong></p>
+		<p class="sighting_longitude"><strong><%= sighting.longitude %></strong></p>
+
+		<p class="sighting_time"><%= time_ago_in_words(sighting.created_at) %> Ago</p>
+	</div>
+
+	<p> <%= link_to "Delete", [sighting.post, sighting], method: :delete, class: "button",
+					data: { confirm: 'Are you sure?' }  %></p>
+</div>

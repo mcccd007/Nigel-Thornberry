@@ -1,0 +1,37 @@
+<div align="center">
+
+  <div id="wrapper">
+    <h1>
+      <div id="first">
+        Animals Index
+      </div>
+      <%= link_to 'New Animal', new_animal_path %>
+    </h1>
+  </div>
+
+  <p id="notice"><%= notice %></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  </table>
+
+  <% @animals.each do |animal| %>
+
+  <div id="div1">
+    <%= link_to animal.name, "/animals/#{animal.id}" %> &mdash;
+  </div>
+  <div id="div2">
+    <p class="animal_time"><%= time_ago_in_words(animal.created_at) %> Ago &mdash;</p>
+  </div>
+  <div id="div3">
+    <%= button_to "X", "/animals/#{animal.id}", method: 'delete', class: "button", data: { confirm: 'Are you sure?' }  %>
+  </div>
+  <hr>
+  <% end %>
+
+</div>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+<div id="animal_content">
+  <h1 class ="name">
+    <%= @animal.name %>
+  </h1>
+
+  <p class="date">
+    Submitted <%= time_ago_in_words(@animal.created_at) %> ago
+    | <%= link_to 'Edit', edit_animal_path(@animal)%>
+    <!-- | <%= link_to 'Delete', animal_path(@animal), method: :delete %> -->
+    | <%= link_to 'Back to Home', root_path %>
+  </p>
