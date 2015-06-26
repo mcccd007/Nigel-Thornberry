@@ -1,13 +1,34 @@
-<%= form_for([@animal, @animal.sightings.build]) do |f| %>
-	<%= f.label :date %><br>
-	<%= f.text_field :date %><br>
-	<br>
-	<%= f.label :latitude %><br>
-	<%= f.text_area :latitude %><br>
-	<br>
-  <%= f.label :longitude %><br>
-  <%= f.text_area :longitude %><br>
-  <br>
-	<%= f.collection_select :region_id, Region.all, :id, :name
- %>	<%= f.submit %>
+<%= form_for([@animal, @sighting]) do |f| %>
+
+	<% if @sighting.errors.any? %>
+
+		<div id="errors">
+				<h2><%= pluralize(@sighting.errors.count, "error") %> prevented this sighting from saving:</h2>
+				<ul>
+					<% @sighting.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+					<% end %>
+				</ul>
+		</div>
+		<% end %>
+
+	<div class="field" >
+			<%= f.label :date %><br>
+			<%= f.text_field :date %><br>
+		<br>
+			<%= f.label :latitude %><br>
+			<%= f.text_area :latitude %><br>
+		<br>
+			<%= f.label :longitude %><br>
+			<%= f.text_area :longitude %><br>
+		<br>
+	</div>
+
+	<div class="actions" >
+		<%= f.collection_select :region_id, Region.all, :id, :name%>
+		<%= f.submit %>
+	</div>
+
 <% end %>
+
+<button type="button"><%= link_to 'Back to Home', root_path %></button>

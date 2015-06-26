@@ -2,16 +2,15 @@
 	<% if @animal.errors.any? %>
 		<div id="errors">
 			<h2><%= pluralize(@animal.errors.count, "error") %> prevented this animal from saving:</h2>
-			<ul>
-				<% @animal.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
+				<ul>
+					<% @animal.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
 		</div>
 	<% end %>
-	<%= f.label :name %><br>
-	<%= f.text_field :name %><br>
+		<%= f.label :name %><br>
+		<%= f.text_field :name, :placeholder => "required *" %><br>
 	<br>
-	<%= f.submit %>
-	<!-- <input type="submit" id="update" value="update"  style="height:50px; width:50px"  -->
+		<%= f.submit %>
 <% end %>

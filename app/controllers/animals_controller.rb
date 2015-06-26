@@ -1,7 +1,22 @@
 class AnimalsController < ApplicationController
 
+  #ISNECUD
+
   def index
     @animals = Animal.all.order("created_at DESC")
+  end
+
+  def show
+    @animal = Animal.find(params[:id])
+    @sighting = Sighting.new
+  end
+
+  def new
+    @animal = Animal.new
+  end
+
+  def edit
+    @animal = Animal.find(params[:id])
   end
 
   def create
@@ -13,19 +28,8 @@ class AnimalsController < ApplicationController
     end
   end
 
-  def new
-    @animal = Animal.new
-  end
-
-  def show
-    @animal = Animal.find(params[:id])
-  end
-
-  def edit
-    @animal = Animal.find(params[:id])
-  end
-
   def update
+
     @animal = Animal.find(params[:id])
     if @animal.update(params[:animal].permit(:name))
       redirect_to @animal, notice: "updated '#{@animal.name}' successfully"
@@ -35,6 +39,7 @@ class AnimalsController < ApplicationController
   end
 
   def destroy
+
     @animal = Animal.find(params[:id])
     if @animal.destroy
       redirect_to root_path, notice: "deleted '#{@animal.name}' successfully"

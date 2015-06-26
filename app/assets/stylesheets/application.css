@@ -30,16 +30,11 @@
  #div1 {
      display: inline-block;
  }
- #div2 {
-     display: inline-block;
- }
- #div3 {
-     display: inline-block;
- }
 
 .button {
-background-color: #000000;
+background-color: #0FF000;
 color: #FFFFFF;
+/*FLOAT IS MY FRIEND?*/
 /*float: right;*/
 padding: 10px;
 border-radius: 10px;
@@ -48,8 +43,8 @@ border-radius: 10px;
 }
 
 button {
-background-color: #000000;
-color: #FFFFFF;
+background-color: #0FF000;
+color: #FFFFFF  ;
 /*float: right;*/
 padding: 10px;
 border-radius: 10px;
@@ -67,14 +62,14 @@ border-radius: 10px;
     height: 20px;
 }
 
-
-.right {
-    position: absolute;
-    right: 0px;
-    width: 300px;
-    /*background-color: #b0e0e6;*/
-}
-
 .container > * {
     display: inline-block;
+}
+
+html {
+  background: url(LIBBy.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

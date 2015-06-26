@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= render "form" %>
+
+
+
 <p>
   <strong>Date of sighting:</strong>
   <%= @sighting.date %>
@@ -12,10 +16,23 @@
   <strong>Longitude at sighting:</strong>
   <%= @sighting.longitude %>
 </p>
-<!-- this is fucked up right here -->
+
 <p>
   <strong>Region of sighting:</strong>
-  <%= @sighting.region%>
+  <%= @sighting.region %>
 </p>
 
-<%= link_to 'Back', root_path %>
+just making sure this is my show page for a sighting
+<br><br>
+
+
+
+
+<%= link_to 'Back', root_path, class: "button" %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
