@@ -1,28 +1,8 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is one of my attempts at the WildLife Tracker exercise.
 
-Things you may want to cover:
+I messed around a lot with CSS/SCSS and html layout of the pages and had intentions of the root page having some animation to it which is not in this current file.
 
-* Ruby version
+Overall:I was just trying to make my own buttons and have them be functional links, have CRUD for the sightings,  and make the regions functional(unsuccesfully).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I would like to have made link to a form rendered as a modal instead of bringing the user to a new page and standardizing the layouts between pages.
